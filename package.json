@@ -12,7 +12,10 @@
   ],
   "activationEvents": [
     "onCommand:extension.helloWorld",
-    "onCommand:document.showTextDocument"
+    "onCommand:document.open",
+    "onCommand:document.showTextDocument",
+    "onCommand:document.showTextDocument2",
+    "onCommand:document.showAllViewColumn"
   ],
   "main": "./out/extension.js",
   "contributes": {
@@ -22,8 +25,24 @@
         "title": "Hello World"
       },
       {
+        "command": "document.open",
+        "title": "API: Open"
+      },
+      {
+        "command": "document.diff",
+        "title": "API: Diff"
+      },
+      {
         "command": "document.showTextDocument",
-        "title": "Show Text Document"
+        "title": "API: Show Text Document"
+      },
+      {
+        "command": "document.showTextDocument2",
+        "title": "Show Text Document2"
+      },
+      {
+        "command": "document.showAllViewColumn",
+        "title": "API: Show All View Column"
       }
     ]
   },
@@ -38,7 +57,7 @@
     "@types/glob": "^7.1.1",
     "@types/mocha": "^5.2.7",
     "@types/node": "^12.11.7",
-    "@types/vscode": "^1.41.0",
+    "@types/vscode": "^1.39.0",
     "glob": "^7.1.5",
     "mocha": "^6.2.2",
     "tslint": "^5.20.0",
